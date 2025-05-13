@@ -1,0 +1,248 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 5px;
+  padding: 20px;
+}
+
+body, html {
+  margin: 0;     /* Elimina los márgenes predeterminados */
+  padding: 0;    /* Elimina el padding predeterminado */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+}
+/* Elimina márgenes y rellenos predeterminados */
+body, header {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #506ea6;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  text-align: center;
+  position: relative; /* Necesario para posicionar el botón */
+}
+.header-content {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  gap: 0px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilos del botón de Login */
+.login-button {
+  position: absolute; /* Posiciona el botón de forma absoluta */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+  padding: 10px 20px;
+  background-color: #000000;
+  color: rgb(255, 240, 78);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.logo {
+  width: 15%; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción */
+
+}
+
+.login-button:hover {
+  background-color: #555; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para el contenedor de categorías */
+.categorias {
+  display: flex; /* Hace que los elementos se coloquen uno al lado del otro */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  background-color: #506ea6; /* Color de fondo del menú */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para los enlaces */
+.categorias a {
+  color: rgb(255, 240, 78); /* Color del texto */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  padding: 0px; /* Espaciado interno (arriba/abajo y izquierda/derecha) */
+  margin: 0 5px; /* Espaciado entre los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover (cuando el cursor pasa sobre los enlaces) */
+.categorias a:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para el enlace activo (opcional) */
+.categorias a.active {
+  background-color: #4CAF50; /* Color de fondo para el enlace activo */
+}
+
+/* Estilos del contenido principal */
+main {
+  padding: 5%;
+  margin-bottom: 2%; /* Margen inferior para el footer */
+}
+
+/* Contenedor de las bebidas */
+#platos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 10px; /* Espacio entre las bebidas */
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilos de cada bebida */
+.plato {
+  background-color:transparent;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  text-align: center;
+}
+
+.plato-imagen {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajusta automáticamente */
+  border-radius: 1px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+.plato h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+.plato h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.plato p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Estilos para la sección de información */
+#about {
+  padding: 20px;
+  text-align: center;
+  background-color:transparent; /* Fondo claro */
+  margin-top: 20px; /* Espacio después de los productos */
+
+}
+
+#about p {
+  color: #555; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+
+/* Estilos del botón de eliminar */
+.plato button {
+  background-color: #ff4d4d; /* Color rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Espacio entre el texto y el botón */
+}
+
+.plato button:hover {
+  background-color: #cc0000; /* Color rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #platos-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Menos columnas en pantallas pequeñas */
+  }
+
+  .plato h3 {
+    font-size: 1.3em; /* Tamaño de fuente más pequeño */
+  }
+
+  .plato p {
+    font-size: 1em; /* Tamaño de fuente más pequeño */
+  }
+
+  .login-button {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    padding: 8px 16px; /* Padding más pequeño */
+  }
+}
+
+@media (max-width: 480px) {
+  #platos-container {
+    grid-template-columns: repeat(2, 1fr); /* Asegura que haya 2 columnas en pantallas pequeñas */
+  }
+  .logo
+  {
+    width: 45%; /* Ajusta el tamaño de la imagen */
+  }
+
+  .plato h3 {
+    font-size: 1.2em; /* Tamaño de fuente más pequeño */
+  }
+
+  .plato p {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+  }
+
+  .login-button {
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+    padding: 6px 12px; /* Padding más pequeño */
+  }
+}
+
+
+/* Estilos para el botón de agregar */
+.add-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745; /* Color verde */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Hace el botón circular */
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+}

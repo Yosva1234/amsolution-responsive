@@ -1,0 +1,142 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Contenedor del formulario */
+#uploadForm {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Título del formulario */
+#uploadForm h1 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grupos de campos del formulario */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+
+  display:inline;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Estilo personalizado para el botón de selección de archivo */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de subir producto */
+#uploadForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#uploadForm button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Mensaje de respuesta */
+#message {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #555555;
+  text-align: center;
+}
+
+/* Estilos para la página de carga */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+#loading p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el spinner */
+.spinner {
+  border: 4px solid #f3f3f3; /* Color de fondo del spinner */
+  border-top: 4px solid #3498db; /* Color del spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animación */
+}
+
+/* Animación del spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
