@@ -8,7 +8,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   const precio = document.getElementById('preciocup').value;
   const info = document.getElementById('info').value;
   const fileInput = document.getElementById('imageInput');
-  const categoria = document.getElementById('categoria');
+  const categoria = document.getElementById('categoria').value;
   const file = fileInput.files[0];
 
   if (!nombre  || !precio  || !info || !file || !categoria) {
@@ -18,22 +18,12 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   } 
 
 
-  var varcategoria;
-
-  if (categoria.value == 'hombre') varcategoria = 'h';
-  if (categoria.value == 'mujer') varcategoria = 'm';
-  if (categoria.value == 'niñ@') varcategoria = 'n';
-  if (categoria.value == 'variados') varcategoria = 'v';
-  if (categoria.value == 'hogar') varcategoria = 'g';
-
-
-
   const formData = new FormData();
   formData.append('image', file);
 
   try {
       // Subir la imagen a ImgBB
-      const imgbbResponse = await fetch('https://api.imgbb.com/1/upload?key=6e55710ea8534900dd92a75481ea7b52', {
+      const imgbbResponse = await fetch('https://api.imgbb.com/1/upload?key=95d0cb31085b82cc5bb9a74c7eaaa790', {
           method: 'POST',
           body: formData,
       });
@@ -51,7 +41,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
           precio: parseFloat(precio),
           info,
           imagen: imageUrl,
-          varcategoria,
+          categoria,
       };
 
       const saveResponse = await fetch('/productos', {
